@@ -1,0 +1,27 @@
+echo 'lets install lamp'
+
+echo '>>update apt'
+apt-get update
+echo 'update apt done<<'
+
+echo '>>install apache2'
+apt-get install apache2
+echo 'install apache2 done<<'
+
+echo '>>install mysql-server'
+apt-get install mysql-server
+echo 'install mysql-server done<<'
+
+echo '>>install php5'
+apt-get install php5 php-pear php5-mysql-server
+echo 'install php5 done<<'
+
+echo '>>installing phpmyadmin'
+apt-get install phpmyadmin
+echo 'installing phpmyadmin done<<'
+
+echo '>>restart service apache2'
+service apache2 restart
+echo 'restart service apache2 done<<'
+
+mysql_secure_installation
